@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <!-- stylesheet -->
+    <link href="./static/css/literallycanvas.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+
+    <style type="text/css">
+      .fs-container {
+        width: 100vh;
+        margin: auto;
+      }
+
+      .literally {
+        width: 100%;
+        height: 100%;
+        /* position: relative; */
+      }
+    </style>
+
+    <!-- dependency: React.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react-with-addons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react-dom.js"></script>
+
+    <!-- Literally Canvas -->
+    <script src="./static/js/literallycanvas.js"></script>
+  </head>
+
+  <body>
+    <!-- where the widget goes. you can do CSS to it. -->
+    <!-- note: as of 0.4.13, you cannot use 'literally' as the class name.
+         sorry about that. -->
+    <!-- <div class="my-drawing"></div> -->
+
+
+      <div id="lc"></div>
+
+
+    <!-- kick it off -->
+    <script type="text/javascript">
+      var lc = LC.init(document.getElementById('lc'), {
+        imageURLPrefix: '/static/img',
+        defaultStrokeWidth: 2,
+        strokeWidths: [1, 2, 3, 5, 30],
+      })
+    </script>
+
+    </script>
+  </body>
+</html>
